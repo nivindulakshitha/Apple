@@ -4,7 +4,7 @@ import ModelView from "./ModelView"
 import { yellowImg } from "../utils";
 import * as THREE from "three"
 import { View } from "@react-three/drei";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { models, sizes } from "../constants";
 import { Canvas } from "@react-three/fiber";
 
@@ -27,6 +27,16 @@ const Model = () => {
 	// Rotations for the models
 	const [smallRotation, setSmallRotation] = useState(0);
 	const [largeRotation, setLargeRotation] = useState(0);
+
+	const tl = gsap.timeline();
+
+	useEffect(() => { 
+		if (size === "large") {
+		
+		} else if (size === "small") {
+
+		}
+	}, [size])
 
 	useGSAP(() => {
 		gsap.to("#heading", {
