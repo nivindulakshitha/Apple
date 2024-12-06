@@ -7,6 +7,7 @@ import { View } from "@react-three/drei";
 import { useEffect, useRef, useState } from "react";
 import { models, sizes } from "../constants";
 import { Canvas } from "@react-three/fiber";
+import { animateWithGSAPTimeline } from "../utils/animation";
 
 const Model = () => {
 	const [size, setSize] = useState('small');
@@ -32,9 +33,15 @@ const Model = () => {
 
 	useEffect(() => { 
 		if (size === "large") {
-		
+			animateWithGSAPTimeline(tl, small, smallRotation, "#view0", "#view1", {
+				transform: "translateX(-100%)",
+				duration: 2
+			})
 		} else if (size === "small") {
-
+			animateWithGSAPTimeline(tl, large, largeRotation, "#view1", "#view0", {
+				transform: "translateX(0)",
+				duration: 2
+			})
 		}
 	}, [size])
 
@@ -85,8 +92,7 @@ const Model = () => {
 							pointerEvents: 'none',
 							overflow: 'hidden'
 						}}
-						// eslint-disable-next-line react/no-unknown-property
-						eventSource={document.getElementById('root')}
+						EventSource={document.getElementById('root')}
 					>
 						<View.Port />
 					</Canvas>
@@ -120,10 +126,7 @@ const Model = () => {
 											backgroundColor: size === value ? '#fff' : 'transparent',
 											color: size === value ? '#000' : '#fff'
 										}}
-										onClick={() => {
-										
-											setSize(value)
-										}}
+										onClick={() => setSize(value)}
 									>
 										{label}
 									</span>
