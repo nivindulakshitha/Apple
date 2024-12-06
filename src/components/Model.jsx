@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import ModelView from "./ModelView"
 
 const Model = () => {
 	useGSAP(() => {
@@ -19,7 +20,7 @@ const Model = () => {
 
 			<div className="flex flex-col items-center mt-5">
 				<div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
-					
+					<ModelView />
 				</div>
 			</div>
 		</section>
