@@ -49,4 +49,3 @@ ModelView.propTypes = {
 }
 
 export default ModelView
-export default ModelView
