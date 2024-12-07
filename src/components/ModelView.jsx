@@ -1,7 +1,8 @@
 import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei"
+import PropTypes from 'prop-types'
 import Lights from "./Lights"
 import { Suspense } from "react"
-import Iphone from "./iPhone"
+import Iphone from "./IPhone"
 import * as THREE from "three"
 import Loader from "./Loader"
 
@@ -37,5 +38,15 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, si
 		</View>
 	)
 }
+ModelView.propTypes = {
+	index: PropTypes.number.isRequired,
+	groupRef: PropTypes.object.isRequired,
+	gsapType: PropTypes.string.isRequired,
+	controlRef: PropTypes.object.isRequired,
+	setRotationState: PropTypes.func.isRequired,
+	size: PropTypes.array.isRequired,
+	item: PropTypes.object.isRequired,
+}
 
+export default ModelView
 export default ModelView
