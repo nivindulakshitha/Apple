@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.postimg.cc/37PnQw8n/Image-from.png" alt="Project Banner" />
+  <img src="https://media.licdn.com/dms/image/v2/D5622AQEZ2uihUqC6zA/feedshare-shrink_800/feedshare-shrink_800/0/1733542060723?e=1736380800&v=beta&t=j2tkQlWAjLLhKWiqWkKzZkybFEfkF9XvSXC2isiXHhM" alt="Project Banner" />
   <h1>iPhone 15 Pro Website Clone</h1>
   <p>A beautiful clone of Apple's iPhone 15 Pro website built with React.js, Three.js, and GSAP.</p>
   <div>
