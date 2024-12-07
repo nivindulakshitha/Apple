@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei"
 import PropTypes from 'prop-types'
 import Lights from "./Lights"
