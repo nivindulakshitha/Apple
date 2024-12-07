@@ -1,3 +1,5 @@
+import { footerLinks } from "../constants"
+
 const Footer = () => {
 	return (
 		<footer className="py-5 sm:px-10 px-5">
@@ -24,6 +26,17 @@ const Footer = () => {
 
 				<div className="flex md:flex-row flex-col md:items-center justify-between">
 					<p className="font-semibold text-gray text-xs">Copyright @ 2024 Apple Inc. ALl right reserved.</p>
+
+					<div className="flex">
+						{
+							footerLinks.map((link, index) => (
+								<p key={index} className="font-semibold text-gray text-xs">
+									{link} {' '}
+									{index !== footerLinks.length - 1 && <span className="mx-2">|</span>}
+								</p>
+							))
+						}
+					</div>
 				</div>
 			</div>
 		</footer>
